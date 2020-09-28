@@ -43,7 +43,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 			}
 		}
 
-		rightLightSensorVal, err := leftLightSensor.Read()
+		rightLightSensorVal, err := rightLightSensor.Read()
 
 		if err != nil {
 			fmt.Errorf("Error reading sensor %+v", err)
@@ -56,7 +56,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 			if turnedStraight == false {
 				gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
-				if leftLightSensorVal >= (LIGHT_IN_REACH + 1000) {
+				if rightLightSensorVal >= (LIGHT_IN_REACH + 1000) {
 					turnedStraight = true
 				}
 			} else {
