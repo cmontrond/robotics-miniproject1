@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	LIGHT_IN_REACH = 2000
+	LIGHT_IN_REACH  = 2000
 	LIGHT_TOO_CLOSE = 100
 )
 
@@ -31,14 +31,16 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 		if lightFound == false && leftLightSensorVal >= LIGHT_IN_REACH {
 			lightFound = true
-			// do stuff here
 
 			if turnedStraight == false {
 				gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
+				if leftLightSensorVal >= (LIGHT_IN_REACH + 1000) {
+					turnedStraight = true
+				}
+			} else {
+				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, -150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -150)
 			}
-
-			_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, -150)
-			_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -150)
 		}
 
 		rightLightSensorVal, err := leftLightSensor.Read()
@@ -51,7 +53,17 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 		if lightFound == false && rightLightSensorVal >= LIGHT_IN_REACH {
 			lightFound = true
-			// do stuff here
+
+			if turnedStraight == false {
+				gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
+				if leftLightSensorVal >= (LIGHT_IN_REACH + 1000) {
+					turnedStraight = true
+				}
+			} else {
+				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, -150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -150)
+			}
+
 		}
 
 		time.Sleep(time.Second)
@@ -63,8 +75,8 @@ func main() {
 	raspiAdaptor := raspi.NewAdaptor()
 	gopigo3 := g.NewDriver(raspiAdaptor)
 
-	leftLightSensor := aio.NewGroveLightSensorDriver(gopigo3, "AD_1_1")
-	rightLightSensor := aio.NewGroveLightSensorDriver(gopigo3, "AD_2_1")
+	leftLightSensor := aio.NewGroveLightSensorDriver(gopigo3, "AD_2_1")
+	rightLightSensor := aio.NewGroveLightSensorDriver(gopigo3, "AD_1_1")
 
 	mainRobotFunc := func() {
 		robotRunLoop(gopigo3, leftLightSensor, rightLightSensor)
