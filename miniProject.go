@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	LIGHT_IN_REACH  = 2000
-	LIGHT_TOO_CLOSE = 100
+	LIGHT_IN_REACH  = 400
+	LIGHT_TOO_CLOSE = 3000
 )
 
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
