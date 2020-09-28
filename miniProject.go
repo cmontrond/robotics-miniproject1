@@ -37,9 +37,9 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 			if turnedStraight == false {
 				fmt.Printf("Turn wheel 2: left sensor")
-				gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
-				if leftLightSensorVal >= (LIGHT_IN_REACH + 1000) {
-					turnedStraight = true
+				if leftLightSensorVal <= (LIGHT_IN_REACH + 1000) {
+					//turnedStraight = true
+					gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
 				}
 			} else {
 				fmt.Printf("Turn wheel 3: left sensor")
@@ -62,9 +62,9 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 			if turnedStraight == false {
 				fmt.Printf("Turn wheel 2: right sensor")
-				gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
-				if rightLightSensorVal >= (LIGHT_IN_REACH + 1000) {
-					turnedStraight = true
+				if rightLightSensorVal <= (LIGHT_IN_REACH + 1000) {
+					//turnedStraight = true
+					gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
 				}
 			} else {
 				fmt.Printf("Turn wheel 3: right sensor")
