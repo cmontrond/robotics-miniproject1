@@ -43,8 +43,8 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 				}
 			} else {
 				fmt.Printf("Turn wheel 3: left sensor")
-				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, -150)
-				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
 			}
 		}
 
@@ -68,8 +68,8 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 				}
 			} else {
 				fmt.Printf("Turn wheel 3: right sensor")
-				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, -150)
-				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
+				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
 			}
 
 		}
