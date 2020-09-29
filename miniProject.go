@@ -33,7 +33,7 @@ func turnRight(gopigo3 *g.Driver) {
 }
 
 func turnLeft(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, 90)
+	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
 	if err != nil {
 		fmt.Errorf("Error turning left wheel %+v", err)
 	}
