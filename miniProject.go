@@ -70,6 +70,8 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 	robotStopped := false
 
+	fmt.Println("Beginning of robotRunLoop")
+
 	for {
 
 		leftLightSensorVal, err := leftLightSensor.Read()
