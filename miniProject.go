@@ -66,8 +66,6 @@ func blinkLED(gopigo3 *g.Driver) {
 
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
 
-	//lightFound := false
-	//turnedStraight := false
 	robotStopped := false
 
 	for {
