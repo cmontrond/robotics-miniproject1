@@ -284,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601421613856</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="test light too close">
+      <created>1601421911731</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1601421911731</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,10 +334,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="test light too close" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601421613497">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601421911350">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601421613497" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601421911350" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -343,9 +350,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601309363930" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601421791015">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601421912754">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601421791015" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601421912754" />
   </component>
 </project>

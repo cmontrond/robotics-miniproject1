@@ -92,11 +92,11 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 		// Stop the Robot if too close to the light
 		if rightLightSensorVal >= LIGHT_TOO_CLOSE || leftLightSensorVal >= LIGHT_TOO_CLOSE {
 			stop(gopigo3)
-			robotStopped = false
+			robotStopped = true
 			blinkLED(gopigo3)
 		}
 
-		if !robotStopped {
+		if robotStopped == false {
 
 			// If the light comes from the right, turn right and move forward
 			if (rightLightSensorVal > leftLightSensorVal) && (rightLightSensorVal >= LIGHT_IN_REACH) {
