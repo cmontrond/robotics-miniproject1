@@ -249,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601420904398</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="test blink led">
+      <created>1601421137770</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601421137770</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,10 +297,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="test blink led" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601420903995">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601421137409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601420903995" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601421137409" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -306,9 +313,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601309363930" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601420905331">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601421138828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601420905331" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601421138828" />
   </component>
 </project>

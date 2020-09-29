@@ -51,17 +51,14 @@ func moveForward(gopigo3 *g.Driver) {
 }
 
 func blinkLED(gopigo3 *g.Driver) {
-
-	on := uint8(0xFF)
-
-	err := gopigo3.SetLED(g.LED_EYE_RIGHT, 0x00, 0x00, on)
+	err := gopigo3.SetLED(g.LED_EYE_RIGHT, 0x00, 0x00, 0xFF)
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	time.Sleep(time.Second)
 
-	err = gopigo3.SetLED(g.LED_EYE_LEFT, 0x00, 0x00, ^on)
+	err = gopigo3.SetLED(g.LED_EYE_RIGHT, 0x00, 0x00, 0x00)
 	if err != nil {
 		fmt.Println(err)
 	}
