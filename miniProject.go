@@ -26,14 +26,14 @@ func stop(gopigo3 *g.Driver) {
 }
 
 func turnRight(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
+	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, -30)
 	if err != nil {
 		fmt.Errorf("Error turning right wheel %+v", err)
 	}
 }
 
 func turnLeft(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
+	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, 30)
 	if err != nil {
 		fmt.Errorf("Error turning left wheel %+v", err)
 	}
@@ -66,51 +66,57 @@ func blinkLED(gopigo3 *g.Driver) {
 
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
 
-	robotStopped := false
+	//robotStopped := false
 
 	for {
 
-		leftLightSensorVal, err := leftLightSensor.Read()
+		turnLeft(gopigo3)
 
-		if err != nil {
-			fmt.Errorf("Error reading sensor %+v", err)
-		}
+		time.Sleep(time.Second * 2)
 
-		rightLightSensorVal, err := rightLightSensor.Read()
+		moveForward(gopigo3)
 
-		if err != nil {
-			fmt.Errorf("Error reading sensor %+v", err)
-		}
-
-		fmt.Println("Right Light Value is ", rightLightSensorVal)
-		fmt.Println("Left Light Value is ", leftLightSensorVal)
-
-		// Stop the Robot if too close to the light
-		if rightLightSensorVal >= LIGHT_TOO_CLOSE || leftLightSensorVal >= LIGHT_TOO_CLOSE {
-			stop(gopigo3)
-			robotStopped = false
-			blinkLED(gopigo3)
-		}
-
-		if !robotStopped {
-
-			// If the light comes from the right, turn right and move forward
-			if (rightLightSensorVal > leftLightSensorVal) && (rightLightSensorVal >= LIGHT_IN_REACH) {
-
-				turnRight(gopigo3)
-				time.Sleep(time.Second)
-				moveForward(gopigo3)
-				time.Sleep(time.Second * 2)
-
-				// If the light comes from the left, turn left and move forward
-			} else if (leftLightSensorVal > rightLightSensorVal) && (leftLightSensorVal >= LIGHT_IN_REACH) {
-
-				turnLeft(gopigo3)
-				time.Sleep(time.Second)
-				moveForward(gopigo3)
-				time.Sleep(time.Second * 2)
-			}
-		}
+		//leftLightSensorVal, err := leftLightSensor.Read()
+		//
+		//if err != nil {
+		//	fmt.Errorf("Error reading sensor %+v", err)
+		//}
+		//
+		//rightLightSensorVal, err := rightLightSensor.Read()
+		//
+		//if err != nil {
+		//	fmt.Errorf("Error reading sensor %+v", err)
+		//}
+		//
+		//fmt.Println("Right Light Value is ", rightLightSensorVal)
+		//fmt.Println("Left Light Value is ", leftLightSensorVal)
+		//
+		//// Stop the Robot if too close to the light
+		//if rightLightSensorVal >= LIGHT_TOO_CLOSE || leftLightSensorVal >= LIGHT_TOO_CLOSE {
+		//	stop(gopigo3)
+		//	robotStopped = false
+		//	blinkLED(gopigo3)
+		//}
+		//
+		//if !robotStopped {
+		//
+		//	// If the light comes from the right, turn right and move forward
+		//	if (rightLightSensorVal > leftLightSensorVal) && (rightLightSensorVal >= LIGHT_IN_REACH) {
+		//
+		//		turnRight(gopigo3)
+		//		time.Sleep(time.Second)
+		//		moveForward(gopigo3)
+		//		time.Sleep(time.Second * 2)
+		//
+		//		// If the light comes from the left, turn left and move forward
+		//	} else if (leftLightSensorVal > rightLightSensorVal) && (leftLightSensorVal >= LIGHT_IN_REACH) {
+		//
+		//		turnLeft(gopigo3)
+		//		time.Sleep(time.Second)
+		//		moveForward(gopigo3)
+		//		time.Sleep(time.Second * 2)
+		//	}
+		//}
 	}
 }
 
