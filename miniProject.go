@@ -40,11 +40,11 @@ func turnLeft(gopigo3 *g.Driver) {
 }
 
 func moveForward(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, 60)
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, -60)
 	if err != nil {
 		fmt.Errorf("Error moving left wheel %+v", err)
 	}
-	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 60)
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -60)
 	if err != nil {
 		fmt.Errorf("Error moving right wheel %+v", err)
 	}

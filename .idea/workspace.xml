@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601416864813</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix turn left">
+      <created>1601417160665</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601417160665</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,13 +156,14 @@
     <MESSAGE value="changes to test the stop function" />
     <MESSAGE value="refactor code" />
     <MESSAGE value="refactor code to use modular functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code to use modular functions" />
+    <MESSAGE value="fix turn left" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix turn left" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601416864454">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601417160299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601416864454" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601417160299" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -168,9 +176,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601309363930" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601416884436">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601417163298">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601416884436" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601417163298" />
   </component>
 </project>
