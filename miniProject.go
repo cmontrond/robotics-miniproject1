@@ -14,68 +14,94 @@ const (
 	LIGHT_TOO_CLOSE = 3000
 )
 
+func stopRobot(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, 0)
+	if err != nil {
+		fmt.Errorf("Error stopping left wheel %+v", err)
+	}
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 0)
+	if err != nil {
+		fmt.Errorf("Error stopping right wheel %+v", err)
+	}
+}
+
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
 
-	lightFound := false
-	turnedStraight := false
+	//lightFound := false
+	//turnedStraight := false
 
 	for {
 
-		leftLightSensorVal, err := leftLightSensor.Read()
+		_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 60)
+		_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 60)
 
-		if err != nil {
-			fmt.Errorf("Error reading sensor %+v", err)
-		}
+		time.Sleep(time.Second * 3)
 
-		fmt.Println("Left Light Value is ", leftLightSensorVal)
+		stopRobot(gopigo3)
 
-		if lightFound == false && leftLightSensorVal >= LIGHT_IN_REACH {
+		//leftLightSensorVal, err := leftLightSensor.Read()
+		//
+		//if err != nil {
+		//	fmt.Errorf("Error reading sensor %+v", err)
+		//}
+		//
+		//fmt.Println("Left Light Value is ", leftLightSensorVal)
+		//
+		//rightLightSensorVal, err := rightLightSensor.Read()
+		//
+		//if err != nil {
+		//	fmt.Errorf("Error reading sensor %+v", err)
+		//}
+		//
+		//fmt.Println("Right Light Value is ", rightLightSensorVal)
+		//
+		//if rightLightSensorVal > leftLightSensorVal && rightLightSensorVal >= LIGHT_IN_REACH {
+		//
+		//} else if leftLightSensorVal > rightLightSensorVal && leftLightSensorVal >= LIGHT_IN_REACH {
+		//
+		//}
 
-			fmt.Printf("Turn wheel 1: left sensor")
+		//if lightFound == false && leftLightSensorVal >= LIGHT_IN_REACH {
+		//
+		//	fmt.Printf("Turn wheel 1: left sensor")
+		//
+		//	lightFound = true
+		//
+		//	if turnedStraight == false {
+		//		fmt.Printf("Turn wheel 2: left sensor")
+		//		if leftLightSensorVal <= (LIGHT_IN_REACH + 1000) {
+		//			//turnedStraight = true
+		//			gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
+		//		}
+		//	} else {
+		//		fmt.Printf("Turn wheel 3: left sensor")
+		//		_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
+		//		_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
+		//	}
+		//}
+		//
+		//fmt.Println("Right Light Value is ", rightLightSensorVal)
+		//
+		//if lightFound == false && rightLightSensorVal >= LIGHT_IN_REACH {
+		//	fmt.Printf("Turn wheel 1: right sensor")
+		//	lightFound = true
+		//
+		//	if turnedStraight == false {
+		//		fmt.Printf("Turn wheel 2: right sensor")
+		//		if rightLightSensorVal <= (LIGHT_IN_REACH + 1000) {
+		//			//turnedStraight = true
+		//			gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
+		//		}
+		//	} else {
+		//		fmt.Printf("Turn wheel 3: right sensor")
+		//		_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
+		//		_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
+		//	}
+		//
+		//}
 
-			lightFound = true
-
-			if turnedStraight == false {
-				fmt.Printf("Turn wheel 2: left sensor")
-				if leftLightSensorVal <= (LIGHT_IN_REACH + 1000) {
-					//turnedStraight = true
-					gopigo3.SetMotorPosition(g.MOTOR_LEFT, -90)
-				}
-			} else {
-				fmt.Printf("Turn wheel 3: left sensor")
-				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
-				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
-			}
-		}
-
-		rightLightSensorVal, err := rightLightSensor.Read()
-
-		if err != nil {
-			fmt.Errorf("Error reading sensor %+v", err)
-		}
-
-		fmt.Println("Right Light Value is ", rightLightSensorVal)
-
-		if lightFound == false && rightLightSensorVal >= LIGHT_IN_REACH {
-			fmt.Printf("Turn wheel 1: right sensor")
-			lightFound = true
-
-			if turnedStraight == false {
-				fmt.Printf("Turn wheel 2: right sensor")
-				if rightLightSensorVal <= (LIGHT_IN_REACH + 1000) {
-					//turnedStraight = true
-					gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 90)
-				}
-			} else {
-				fmt.Printf("Turn wheel 3: right sensor")
-				_ = gopigo3.SetMotorDps(g.MOTOR_LEFT, 150)
-				_ = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 150)
-			}
-
-		}
-
-		time.Sleep(time.Second)
-		lightFound = false
+		//time.Sleep(time.Second)
+		//lightFound = false
 	}
 }
 
