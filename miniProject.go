@@ -50,6 +50,20 @@ func moveForward(gopigo3 *g.Driver) {
 	}
 }
 
+func blinkLED(gopigo3 *g.Driver) {
+	err := gopigo3.SetLED(g.LED_EYE_RIGHT, 0x00, 0x00, 0xFF)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	time.Sleep(time.Second)
+
+	err = gopigo3.SetLED(g.LED_EYE_LEFT, 0x00, 0x00, 0x00)
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
 
 	//lightFound := false
@@ -77,6 +91,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 		if rightLightSensorVal >= LIGHT_TOO_CLOSE || leftLightSensorVal >= LIGHT_TOO_CLOSE {
 			stop(gopigo3)
 			robotStopped = false
+			blinkLED(gopigo3)
 		}
 
 		// If the light comes from the right, turn right and move forward
