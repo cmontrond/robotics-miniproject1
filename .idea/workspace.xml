@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0b8e82a-d72c-4397-bcfa-a00661bc4c52" name="Default Changelist" comment="" />
+    <list default="true" id="f0b8e82a-d72c-4397-bcfa-a00661bc4c52" name="Default Changelist" comment="test light too close">
+      <change beforePath="$PROJECT_DIR$/miniProject.go" beforeDir="false" afterPath="$PROJECT_DIR$/miniProject.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -295,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601421991719</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="test light too close">
+      <created>1601422116775</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1601422116775</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,10 +347,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="test light too close" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601421991356">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601422217734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601421991356" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601422217734" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -354,9 +363,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="536" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601309363930" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601421992974">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601422117871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601421992974" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601422117871" />
   </component>
 </project>
