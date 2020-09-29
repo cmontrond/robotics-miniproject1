@@ -39,6 +39,8 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 		stopRobot(gopigo3)
 
+		time.Sleep(time.Second * 3)
+
 		//leftLightSensorVal, err := leftLightSensor.Read()
 		//
 		//if err != nil {
