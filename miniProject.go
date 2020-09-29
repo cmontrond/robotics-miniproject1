@@ -62,6 +62,8 @@ func blinkLED(gopigo3 *g.Driver) {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	time.Sleep(time.Second)
 }
 
 func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver, rightLightSensor *aio.GroveLightSensorDriver) {
