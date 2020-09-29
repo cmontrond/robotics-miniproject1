@@ -26,7 +26,7 @@ func stop(gopigo3 *g.Driver) {
 }
 
 func turnRight(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, 30)
+	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, -30)
 	if err != nil {
 		fmt.Errorf("Error turning right wheel %+v", err)
 	}
@@ -70,7 +70,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 	for {
 
-		turnLeft(gopigo3)
+		turnRight(gopigo3)
 
 		time.Sleep(time.Second)
 
