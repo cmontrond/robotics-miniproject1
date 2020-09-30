@@ -12,6 +12,8 @@ import (
 const (
 	LIGHT_IN_REACH  = 1000
 	LIGHT_TOO_CLOSE = 8000
+	TURN_POSITION   = -20
+	FORWARD_DPS     = -60
 )
 
 func stop(gopigo3 *g.Driver) {
@@ -26,25 +28,25 @@ func stop(gopigo3 *g.Driver) {
 }
 
 func turnRight(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, -20)
+	err := gopigo3.SetMotorPosition(g.MOTOR_LEFT, TURN_POSITION)
 	if err != nil {
 		fmt.Errorf("Error turning right wheel %+v", err)
 	}
 }
 
 func turnLeft(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, -20)
+	err := gopigo3.SetMotorPosition(g.MOTOR_RIGHT, TURN_POSITION)
 	if err != nil {
 		fmt.Errorf("Error turning left wheel %+v", err)
 	}
 }
 
 func moveForward(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, -60)
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, FORWARD_DPS)
 	if err != nil {
 		fmt.Errorf("Error moving left wheel %+v", err)
 	}
-	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, -60)
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, FORWARD_DPS)
 	if err != nil {
 		fmt.Errorf("Error moving right wheel %+v", err)
 	}
