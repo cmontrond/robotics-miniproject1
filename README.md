@@ -56,7 +56,7 @@ Run the project:
 
 ## Instructor
 
-**Dr. John Santore** - [Contact](jsantore@bridgew.edu)
+**Dr. John Santore** - [Contact](mailto:jsantore@bridgew.edu)
 
 ## License
 
