@@ -15,7 +15,7 @@ const (
 	TURN_POSITION   = 45
 	FORWARD_DPS     = -160
 	TURN_DPS        = -60
-	SPEED           = 160
+	SPEED           = 120
 	DIFFERENCE      = 200
 )
 
