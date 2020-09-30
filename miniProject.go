@@ -118,7 +118,7 @@ func moveForward(gopigo3 *g.Driver) {
 }
 
 func forward(gopigo3 *g.Driver) {
-	err := gopigo3.SetMotorDps(g.MOTOR_LEFT+g.MOTOR_RIGHT, SPEED)
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT+g.MOTOR_RIGHT, -SPEED)
 	if err != nil {
 		fmt.Errorf("Error moving forward %+v", err)
 	}
