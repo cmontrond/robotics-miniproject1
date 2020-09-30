@@ -18,7 +18,7 @@ const (
 	SPEED           = 160
 )
 
-func stop(gopigo3 *g.Driver) {
+func stopMoving(gopigo3 *g.Driver) {
 	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, 0)
 	if err != nil {
 		fmt.Errorf("Error stopping left wheel %+v", err)
@@ -26,6 +26,13 @@ func stop(gopigo3 *g.Driver) {
 	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 0)
 	if err != nil {
 		fmt.Errorf("Error stopping right wheel %+v", err)
+	}
+}
+
+func stop(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT+g.MOTOR_RIGHT, 0)
+	if err != nil {
+		fmt.Errorf("Error stopping the robot %+v", err)
 	}
 }
 
