@@ -146,7 +146,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 
 	for {
 
-		right(gopigo3)
+		left(gopigo3)
 		time.Sleep(time.Second * 3)
 		stop(gopigo3)
 		time.Sleep(time.Second * 3)
