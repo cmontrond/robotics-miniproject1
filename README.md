@@ -4,7 +4,7 @@ First Mini-Project for COMP 570: Robotics at Bridgewater State University.<br>
 
 This project aims to create a robot, and a program that will find a light and drive to the light.
 By doing this project, the student will gain experience doing sensor/effector fusion, using sensor data to drive behavior 
-in its simplest form
+in its simplest form.
 
 ## Getting Started
 
