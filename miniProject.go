@@ -132,10 +132,11 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 				time.Sleep(time.Millisecond * 200)
 
 			} else if (rightLightSensorVal >= LIGHT_IN_REACH) && (leftLightSensorVal >= LIGHT_IN_REACH) {
+
 				moveForward(gopigo3)
 				time.Sleep(time.Second)
-			}
-			else {
+
+			} else {
 				stop(gopigo3)
 			}
 		}
