@@ -13,7 +13,7 @@ const (
 	LIGHT_IN_REACH  = 2500
 	LIGHT_TOO_CLOSE = 3500
 	TURN_POSITION   = -10
-	FORWARD_DPS     = -50
+	FORWARD_DPS     = -60
 )
 
 func stop(gopigo3 *g.Driver) {
@@ -109,7 +109,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 				turnRight(gopigo3)
 				time.Sleep(time.Second)
 				moveForward(gopigo3)
-				time.Sleep(time.Second)
+				time.Sleep(time.Millisecond * 500)
 
 				// If the light comes from the left, turn left and move forward
 			} else if (leftLightSensorVal > rightLightSensorVal) && (leftLightSensorVal >= LIGHT_IN_REACH) && (leftRightDifference >= 200) {
@@ -117,7 +117,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 				turnLeft(gopigo3)
 				time.Sleep(time.Second)
 				moveForward(gopigo3)
-				time.Sleep(time.Second)
+				time.Sleep(time.Millisecond * 500)
 
 			} else if (rightLightSensorVal >= LIGHT_IN_REACH) && (leftLightSensorVal >= LIGHT_IN_REACH) {
 				moveForward(gopigo3)
