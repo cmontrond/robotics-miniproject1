@@ -372,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601479694264</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="adjust speeds">
+      <created>1601482178607</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1601482178607</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +398,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix variable usage" />
     <MESSAGE value="add debugs" />
     <MESSAGE value="reverse move forward" />
     <MESSAGE value="test stop function" />
@@ -416,17 +422,18 @@
     <MESSAGE value="fix typo in readme file" />
     <MESSAGE value="fix mailto professor" />
     <MESSAGE value="use constants for turn and dps" />
-    <option name="LAST_COMMIT_MESSAGE" value="use constants for turn and dps" />
+    <MESSAGE value="adjust speeds" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust speeds" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601426979672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="530" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601426979672" />
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601479693716">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601482178230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601479693716" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601482178230" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -443,10 +450,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601427531716" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601479698557">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601482180530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601479698557" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601482180530" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601426564067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
