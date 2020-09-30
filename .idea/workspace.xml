@@ -400,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601482518888</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fix turn left">
+      <created>1601482760973</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1601482760973</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,10 +458,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="530" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601426979672" />
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601482518490">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601482760601">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601482518490" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601482760601" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -471,10 +478,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601427531716" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601482520887">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601482763162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601482520887" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601482763162" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601426564067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
