@@ -13,8 +13,8 @@ const (
 	LIGHT_IN_REACH  = 800
 	LIGHT_TOO_CLOSE = 3100
 	TURN_POSITION   = 30
-	FORWARD_DPS     = -100
-	TURN_DPS        = -50
+	FORWARD_DPS     = -160
+	TURN_DPS        = -60
 )
 
 func stop(gopigo3 *g.Driver) {
