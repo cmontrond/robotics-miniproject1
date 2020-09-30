@@ -16,7 +16,7 @@ const (
 	FORWARD_DPS     = -160
 	TURN_DPS        = -60
 	SPEED           = 120
-	DIFFERENCE      = 200
+	DIFFERENCE      = 400
 )
 
 func stopMoving(gopigo3 *g.Driver) {
