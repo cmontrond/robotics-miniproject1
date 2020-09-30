@@ -15,6 +15,7 @@ const (
 	TURN_POSITION   = 45
 	FORWARD_DPS     = -160
 	TURN_DPS        = -60
+	SPEED           = 160
 )
 
 func stop(gopigo3 *g.Driver) {
@@ -42,6 +43,50 @@ func turnLeft(gopigo3 *g.Driver) {
 	}
 }
 
+func spinLeft(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, SPEED*-1)
+	if err != nil {
+		fmt.Errorf("Error spinning left %+v", err)
+	}
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, SPEED)
+	if err != nil {
+		fmt.Errorf("Error spinning left %+v", err)
+	}
+}
+
+func spinRight(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, SPEED)
+	if err != nil {
+		fmt.Errorf("Error spinning left %+v", err)
+	}
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, SPEED*-1)
+	if err != nil {
+		fmt.Errorf("Error spinning left %+v", err)
+	}
+}
+
+func left(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, 0)
+	if err != nil {
+		fmt.Errorf("Error moving left %+v", err)
+	}
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, SPEED)
+	if err != nil {
+		fmt.Errorf("Error moving left %+v", err)
+	}
+}
+
+func right(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, SPEED)
+	if err != nil {
+		fmt.Errorf("Error moving left %+v", err)
+	}
+	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 0)
+	if err != nil {
+		fmt.Errorf("Error moving left %+v", err)
+	}
+}
+
 func turnMove(gopigo3 *g.Driver) {
 	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, TURN_DPS)
 	if err != nil {
@@ -61,6 +106,13 @@ func moveForward(gopigo3 *g.Driver) {
 	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, FORWARD_DPS)
 	if err != nil {
 		fmt.Errorf("Error moving right wheel %+v", err)
+	}
+}
+
+func forward(gopigo3 *g.Driver) {
+	err := gopigo3.SetMotorDps(g.MOTOR_LEFT+g.MOTOR_RIGHT, SPEED)
+	if err != nil {
+		fmt.Errorf("Error moving forward %+v", err)
 	}
 }
 
@@ -118,22 +170,31 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 			// If the light comes from the right, turn right and move forward
 			if (rightLightSensorVal > leftLightSensorVal) && (rightLightSensorVal >= LIGHT_IN_REACH) && (rightLeftDifference >= 400) {
 
-				turnRight(gopigo3)
+				//turnRight(gopigo3)
+				//time.Sleep(time.Second)
+				//turnMove(gopigo3)
+				//time.Sleep(time.Millisecond * 200)
+
+				right(gopigo3)
 				time.Sleep(time.Second)
-				turnMove(gopigo3)
-				time.Sleep(time.Millisecond * 200)
 
 				// If the light comes from the left, turn left and move forward
 			} else if (leftLightSensorVal > rightLightSensorVal) && (leftLightSensorVal >= LIGHT_IN_REACH) && (leftRightDifference >= 400) {
 
-				turnLeft(gopigo3)
+				//turnLeft(gopigo3)
+				//time.Sleep(time.Second)
+				//turnMove(gopigo3)
+				//time.Sleep(time.Millisecond * 200)
+
+				left(gopigo3)
 				time.Sleep(time.Second)
-				turnMove(gopigo3)
-				time.Sleep(time.Millisecond * 200)
 
 			} else if (rightLightSensorVal >= LIGHT_IN_REACH) && (leftLightSensorVal >= LIGHT_IN_REACH) {
 
-				moveForward(gopigo3)
+				//moveForward(gopigo3)
+				//time.Sleep(time.Second)
+
+				forward(gopigo3)
 				time.Sleep(time.Second)
 
 			} else {
