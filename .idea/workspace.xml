@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0b8e82a-d72c-4397-bcfa-a00661bc4c52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miniProject.go" beforeDir="false" afterPath="$PROJECT_DIR$/miniProject.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -366,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601427661851</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="use constants for turn and dps">
+      <created>1601479694264</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1601479694264</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +391,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix in reach value" />
     <MESSAGE value="fix variable usage" />
     <MESSAGE value="add debugs" />
     <MESSAGE value="reverse move forward" />
@@ -410,17 +415,18 @@
     <MESSAGE value="add license and readme files" />
     <MESSAGE value="fix typo in readme file" />
     <MESSAGE value="fix mailto professor" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix mailto professor" />
+    <MESSAGE value="use constants for turn and dps" />
+    <option name="LAST_COMMIT_MESSAGE" value="use constants for turn and dps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601426979672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="530" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1601426979672" />
-    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601427661464">
+    <state x="381" y="0" key="CommitChangelistDialog2" timestamp="1601479693716">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601427661464" />
+    <state x="381" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601479693716" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1601417145440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -437,10 +443,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1601427531716" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601427663463">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601479698557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601427663463" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601479698557" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601426564067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
