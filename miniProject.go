@@ -26,22 +26,22 @@ func stop(gopigo3 *g.Driver) {
 func left(gopigo3 *g.Driver) {
 	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, 0)
 	if err != nil {
-		fmt.Errorf("Error moving left %+v", err)
+		fmt.Errorf("Error turning left %+v", err)
 	}
 	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, SPEED)
 	if err != nil {
-		fmt.Errorf("Error moving left %+v", err)
+		fmt.Errorf("Error turning left %+v", err)
 	}
 }
 
 func right(gopigo3 *g.Driver) {
 	err := gopigo3.SetMotorDps(g.MOTOR_LEFT, SPEED)
 	if err != nil {
-		fmt.Errorf("Error moving left %+v", err)
+		fmt.Errorf("Error turning right %+v", err)
 	}
 	err = gopigo3.SetMotorDps(g.MOTOR_RIGHT, 0)
 	if err != nil {
-		fmt.Errorf("Error moving left %+v", err)
+		fmt.Errorf("Error turning right %+v", err)
 	}
 }
 
