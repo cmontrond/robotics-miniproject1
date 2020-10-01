@@ -50,9 +50,10 @@ Run the project:
 * [Go](https://golang.org//) - The Programming Language
 * [Gobot](https://gobot.io/) - The Robotics/IoT Framework
 
-## Author
+## Authors
 
 **Christopher Montrond da Veiga Fernandes** - [Contact](mailto:cmontronddaveigafern@student.bridgew.edu)<br>
+**Amari Cisco** - [Contact](mailto:asisco@student.bridgew.edu)<br>
 
 ## Instructor
 
