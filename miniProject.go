@@ -170,7 +170,7 @@ func robotRunLoop(gopigo3 *g.Driver, leftLightSensor *aio.GroveLightSensorDriver
 			blinkLED(gopigo3)
 		}
 
-		if robotStopped == false {
+		if robotStopped == false && leftLightSensorVal > 0 && rightLightSensorVal > 0 {
 
 			rightLeftDifference := rightLightSensorVal - leftLightSensorVal
 			leftRightDifference := leftLightSensorVal - rightLightSensorVal
