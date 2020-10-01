@@ -11,11 +11,11 @@ import (
 
 const (
 	LIGHT_IN_REACH  = 800
-	LIGHT_TOO_CLOSE = 2800
+	LIGHT_TOO_CLOSE = 3100
 	TURN_POSITION   = 45
 	FORWARD_DPS     = -160
 	TURN_DPS        = -60
-	SPEED           = 200
+	SPEED           = 120
 	DIFFERENCE      = 300
 )
 
