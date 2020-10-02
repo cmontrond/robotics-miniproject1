@@ -11,7 +11,7 @@ import (
 
 const (
 	LIGHT_IN_REACH  = 1000
-	LIGHT_TOO_CLOSE = 3050
+	LIGHT_TOO_CLOSE = 3100
 	SPEED           = 120
 	DIFFERENCE      = 150
 )
